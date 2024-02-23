@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="es" class="h-100" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fer Robles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+
+    <!--
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+
+    -->
+    
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+
+      .navbar-glass {
+        background: rgba(255, 255, 255, 0.6); /* Fondo blanco semitransparente */
+        backdrop-filter: blur(10px); /* Efecto de desenfoque */
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .bg-custom {
+        background-color: rgb(244, 244, 244);
+      }
+
+      .text-black {
+        color: rgb(15, 15, 15);
+      }
+
+      .bg-custom-1 {
+        border-radius: 1.2rem !important;
+        background: linear-gradient(120deg, #ef7732, #ea8024, #f2a71a, #ffa530);
+        background-size: 200% 200%;
+        transition: background-position 1.5s ease, transform 1.5s ease; /* Add transform to the transition */
+        background-position: 0% 50%;
+      }
+      .bg-custom-2 {
+        border-radius: 1.2rem !important;
+        background: linear-gradient(120deg, #ff7f36, #f48525, #f2a71a, #ffa530);
+        background-size: 200% 200%;
+        transition: background-position 1.5s ease, transform 1.5s ease; /* Add transform to the transition */
+        background-position: 0% 50%;
+      }
+
+      .bg-custom-1:hover, .bg-custom-2:hover {
+        cursor: pointer;
+        background-position: 100% 50%;
+        /*transform: scale(1.01);  Increase the size a bit */
+      }
+
+      .border-radius-round {
+        border-radius: 1.2rem !important;
+      }
+
+      .border-radius-round2 {
+        border-top-right-radius: 1.2rem !important;
+        border-top-left-radius: 1.2rem !important;
+      }
+
+
+      button, a {
+        border-radius: 1rem !important;
+      }
+
+      .imagen-desplazada {
+        position: relative;
+        top: -400px; /* Ajusta este valor según la cantidad que quieras desplazar la imagen hacia arriba */
+        width: 60%;
+        transition: background-position 0.5s ease, transform 0.5s ease;
+        border: solid 10px #333;
+        border-radius: 2em;
+      }
+
+      .imagen-desplazada:hover, .pricing:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+      }
+
+      .max-height-custom {
+        max-height: 300px;
+      }
+
+      .w-60 {
+        width: 60%;
+      }
+
+      .stepper {
+        .line {
+          width: 2px;
+          background-color: lightgrey !important;
+        }
+      }
+
+      .bg-primary {
+        background-color: #44aff2 !important;
+      }
+
+      .mt-large {
+        margin-top: 100px;
+      }
+
+      .renata-app {
+        width: 90%;
+      }
+
+      .pricing {
+        transition: background-position 0.5s ease, transform 0.5s ease;
+      }
+
+      .tema-gris .accordion-item {
+        background-color: #f8f9fa00; /* Un tono de gris claro */
+        color: #333; /* Color del texto */
+      }
+
+      .tema-gris .accordion-button {
+        background-color: #f8f9fa; /* Un tono de gris para los botones */
+      }
+
+      .accordion-item {
+        border: none;
+        margin-bottom: 10px;
+      }
+
+      /* Opcional: si también deseas eliminar los bordes de los botones cuando están colapsados */
+      .accordion-button.collapsed {
+        border-bottom: none;
+      }
+
+      .accordion-header {
+        background-color: transparent !important;
+      }
+
+      .font-poppins {
+        font-family: 'Poppins', sans-serif !important;
+      }
+
+      .bold-text {
+        font-weight: 700 !important;
+      }
+
+      .bg-orange {
+        background-color: #ea8024;
+      }
+
+      .carousel-img {
+        width: 100%;
+        height: 700px;
+        object-fit:cover;
+        border-radius: 1.2rem !important;
+      }
+      
+      .lead {
+        text-align: justify !important;
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+  </head>
+
+<header>
+  <nav class="navbar navbar-expand-sm fixed-top navbar-glass px-lg-5 px-md-5 px-sm-3 py-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo_nav.png" alt="Logo" height="35"> <!-- Ajusta la altura según necesites -->
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sobremi">Sobre Mí</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#miscolumnas">Mis Columnas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#redes">Redes</a>
+          </li>
+          
+
+          
+
+          <!---
+            <p class="mt-2 mx-4 d-none d-lg-block">|</p>
+            <li class="nav-item">
+            <a class="btn btn-dark" href="https://main.goji-mx.cloud">Iniciar Sesión</a>
+          </li>
+          
+          -->
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+<body class="bg-light">
+<!-- Begin page content -->
+<main class="flex-shrink-0 py-5 px-4 font-poppins">
+
+  <div class="container mt-5 p-lg-5 p-md-5 p-sm-2 bg-custom-1 text-light">
+    <div class="col-sm-12 col-md-6 col-lg-5 p-3">
+      <h2 class="d-none d-md-block">¡Hagamos comunidad!</h2>
+      <h1 class="mt-3 mb-4"><img src="images/logo_fernanda_white.png" class="w-100"></h1>
+      <p class="lead w-100">
+        Trabajamos juntas y juntos por un México más justo.
+      </p>
+      <a class="btn btn-lg btn-light me-3 mb-3">¡Arráncate!</a>
+    </div>
+  </div>
+
+  <section id="inicio">
+    <div class="container mt-5 p-lg-5 p-md-5 p-sm-2 bg-white border-radius-round text-dark">
+    
+      <div class="row p-0 m-0">
+  
+        
+        <div class="col-sm-12 col-md-6 col-lg-5 p-3">
+          <h2 class="mb-5 pb-4 bold-text">Unidas y unidos por el Cambio</h2>
+        
+          <h4 class="mb-2">Mi Compromiso</h4>
+          <p class="lead w-100 mb-5">
+            Me dedico a construir un futuro más equitativo para todas y todos, centrando mis esfuerzos en combatir la desigualdad de género y de oportunidades en nuestra sociedad. Juntos, podemos lograr un cambio significativo.
+          </p>
+        
+          <h4 class="mb-2">Cultura y Comunidad</h4>
+          <p class="lead w-100 mb-5">
+            Creo firmemente en el poder del arte y la cultura como medios para unir a la gente y fomentar el diálogo.
+          </p>
+        
+        </div>
+        
+    
+    
+        <div class="d-none d-lg-block col-lg-7 p-3 text-center max-height-custom animate__animated animate__fadeInUp">
+          <img class="imagen-desplazada" src="images/fernanda_robles2.jpg" alt="fernanda robles">
+        </div>
+  
+      </div>
+      
+    </div>
+  </section>
+
+  <div class="container mt-5 p-lg-5 p-md-5 p-sm-2 bg-white border-radius-round text-dark">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active px-3">
+          <img src="images/fer (1).jpg" class="d-block carousel-img" alt="fernanda robles">
+        </div>
+        <div class="carousel-item px-3">
+          <img src="images/fer (2).jpg" class="d-block carousel-img" alt="fernanda robles">
+        </div>
+        <div class="carousel-item px-3">
+          <img src="images/fer (3).jpg" class="d-block carousel-img" alt="fernanda robles">
+        </div>
+        <div class="carousel-item px-3">
+          <img src="images/fer (4).jpg" class="d-block carousel-img" alt="fernanda robles">
+        </div>
+        <div class="carousel-item px-3">
+          <img src="images/fer (5).jpg" class="d-block carousel-img" alt="fernanda robles">
+        </div>
+        <div class="carousel-item px-3">
+          <img src="images/fer (6).jpg" class="d-block carousel-img" alt="fernanda robles">
+        </div>
+        <div class="carousel-item px-3">
+          <img src="images/fer (7).jpg" class="d-block carousel-img" alt="fernanda robles">
+        </div>
+        <div class="carousel-item px-3">
+          <img src="images/fer (8).jpg" class="d-block carousel-img" alt="fernanda robles">
+        </div>
+        <div class="carousel-item px-3">
+          <img src="images/fer (9).jpg" class="d-block carousel-img" alt="fernanda robles">
+        </div>
+        <div class="carousel-item px-3">
+          <img src="images/fer (10).jpg" class="d-block carousel-img" alt="fernanda robles">
+        </div>
+        <div class="carousel-item px-3">
+          <img src="images/fer (11).jpg" class="d-block carousel-img" alt="fernanda robles">
+        </div>
+        <div class="carousel-item px-3">
+          <img src="images/fer (12).jpg" class="d-block carousel-img" alt="fernanda robles">
+        </div>
+        <div class="carousel-item px-3">
+          <img src="images/fer (13).jpg" class="d-block carousel-img" alt="fernanda robles">
+        </div>
+        <div class="carousel-item px-3">
+          <img src="images/fer (14).jpg" class="d-block carousel-img" alt="fernanda robles">
+        </div>
+        <div class="carousel-item px-3">
+          <img src="images/fer (15).jpg" class="d-block carousel-img" alt="fernanda robles">
+        </div>
+        <div class="carousel-item px-3">
+          <img src="images/fer (16).jpg" class="d-block carousel-img" alt="fernanda robles">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <section id="sobremi">
+    <div class="container mt-5 p-lg-5 p-md-5 p-sm-2 bg-white border-radius-round text-dark">
+    
+      <div class="row p-0 m-0">
+  
+        <div class="col-sm-12 col-md-6 col-lg-6 p-3">
+          <h2 class="mb-4 bold-text">Sobre Mí</h2>
+        
+          <img class="w-100 mb-4" src="images/fer_new2.jpg" alt="" style="border: solid 10px #333; border-radius: 2em;">
+
+          <img class="w-100" src="images/fer (13).jpg" alt="" style="border: solid 10px #333; border-radius: 2em;">
+
+        
+        </div>
+        
+        <div class="col-sm-12 col-md-6 col-lg-6 ps-4">
+        
+          <p class="lead w-100 my-5 pt-4">
+            Mi camino ha estado guiado por la convicción de que podemos construir una sociedad más justa y equitativa. Graduada en Gobierno por la Universidad Panamericana, con especialización en Gobierno de Instituciones y Organismos Internacionales en Madrid, y un programa en Economía Política Internacional en la London School of Economics.
+          </p>
+          
+          <p class="lead w-100 my-5">
+            Mi experiencia laboral en la Comisión de Trabajo, así como el senado de la República, en la embajada de México en Bélgica y Luxemburgo y diversas campañas políticas, han sido fundamentales en mi carrera. Dentro de mis intereses personales están el arte, el fútbol y la gastronomía. Estos intereses, junto con el inquebrantable apoyo de mi familia, me impulsan a trabajar por y para la comunidad, buscando siempre el bienestar común.
+          </p>
+
+        
+        </div>
+        
+  
+      </div>
+      
+    </div>
+  </section>
+  
+
+
+  <!--
+<div class="container mt-5 p-lg-5 p-md-5 p-sm-2 bg-custom-2 border-radius-round text-white text-center">
+    <div class="row p-5">
+      <div class="col-md-4 col-sm-12 text-center mt-4">
+        <img src="https://assets-global.website-files.com/63483ad423421bd16e7a7ae7/63fb9500fa181ff14781896c_CDMX.png" class="w-50">
+        <h4 class="text-center w-100 mt-3">Ciudad de México</h4>
+      </div>
+      <div class="col-md-4 col-sm-12 text-center mt-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Miguel_Hidalgo%2C_M%C3%A9xico_DF.svg/179px-Miguel_Hidalgo%2C_M%C3%A9xico_DF.svg.png" class="w-25">
+        <h4 class="text-center w-100 mt-3">Miguel Hidalgo</h4>
+      </div>
+      <div class="col-md-4 col-sm-12 text-center mt-4">
+        <img src="https://movimientociudadanosonora.com/wp-content/uploads/2021/10/logoMC-blanco.png" class="w-50 mb-3">
+        <h4 class="text-center w-100 mt-3">Movimiento Ciudadano</h4>
+      </div>
+      
+    </div>
+  </div>
+  -->
+  
+
+  <section id="miscolumnas">
+    <div class="container mt-5 p-lg-5 p-md-5 p-sm-2 bg-white border-radius-round text-dark text-center">
+      <br class="d-block d-lg-none">
+  
+      <h2 class="mt-0 mb-3">Mis Columnas</h2>
+      <p class="lead mb-5"></p>
+  
+      
+        
+      <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-12 mb-4 pricing">
+          <div class="card mb-4 bg-light border-0 border-radius-round">
+            <div class="card-header border-0 border-radius-round2 bg-orange text-white">
+              <h4 class="my-0 font-weight-normal p-4">Le estamos fallando a las infancias</h4>
+            </div>
+            <div class="card-body pt-4 pb-5 border-radius-round">
+                <img class="w-100 border-radius-round" src="https://portaluchile.uchile.cl/.imaging/default/dam/imagenes/Uchile/imagenes-noticias/158705_1_derechosdelnino-4-800-l_L/jcr:content.jpg" alt="">
+                <p class="mt-3">
+                  En este país basta con salir a la calle para atestiguar la triste realidad de las niñas y niños de nuestro país...
+                </p>
+                <a href="https://comentariodeldia.com/2022/05/06/le-estamos-fallando-a-las-infancias/" class="btn btn-lg btn-light me-3 mb-3">Leer más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-4 pricing">
+          <div class="card mb-4 bg-light border-0 border-radius-round">
+            <div class="card-header border-0 border-radius-round2 bg-orange text-white">
+              <h4 class="my-0 font-weight-normal p-4">Voltear a ver hacia lo local</h4>
+            </div>
+            <div class="card-body pt-4 pb-5 border-radius-round">
+              <img class="w-100 border-radius-round" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Badajoz%2C_Plaza_de_Espa%C3%B1a%2C_Palacio_Municipal_130-1.jpg" alt="">
+
+                <p class="mt-3">
+                  Decía Mauricio Merino que “gobernar no solo es responder, sino también seleccionar” en ese sentido la seguridad pública...
+                </p>
+                <a href="https://comentariodeldia.com/2022/07/04/voltear-a-ver-hacia-lo-local/" class="btn btn-lg btn-light me-3 mb-3">Leer más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-4 pricing">
+          <div class="card mb-4 bg-light border-0 border-radius-round">
+            <div class="card-header border-0 border-radius-round2 bg-orange text-white">
+              <h4 class="my-0 font-weight-normal p-4">Aunque no sea junio <br><br></h4>
+            </div>
+            <div class="card-body pt-4 pb-5 border-radius-round">
+              <img class="w-100 border-radius-round" src="https://outragemag.com/wp-content/uploads/2007/07/LGBT1.jpg" alt="">
+
+                <p class="mt-3">
+                  Este año, durante la marcha del orgullo LGBTTTIQ+, vi un cartel levantado por una persona que decía “quiero derechos, no publicidad”...
+                </p>
+                <a href="https://comentariodeldia.com/2022/07/19/aunque-no-sea-junio/" class="btn btn-lg btn-light me-3 mb-3">Leer más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-4 pricing">
+          <div class="card mb-4 bg-light border-0 border-radius-round">
+            <div class="card-header border-0 border-radius-round2 bg-orange text-white">
+              <h4 class="my-0 font-weight-normal p-4">Un mundo hecho para hombres </h4>
+            </div>
+            <div class="card-body pt-4 pb-5 border-radius-round">
+               <img class="w-100 border-radius-round" src="https://www.lavanguardia.com/files/article_main_microformat/uploads/2020/01/22/5fa906ab23825.jpeg" alt="">
+                <p class="mt-3">
+                  Existen una infinidad de cifras que demuestran la desigualdad laboral hacia las mujeres y el machismo en los lugares de trabajo mi intención...
+                </p>
+                <a href="https://comentariodeldia.com/2022/10/27/un-mundo-hecho-para-hombres/" class="btn btn-lg btn-light me-3 mb-3">Leer más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-4 pricing">
+          <div class="card mb-4 bg-light border-0 border-radius-round">
+            <div class="card-header border-0 border-radius-round2 bg-orange text-white">
+              <h4 class="my-0 font-weight-normal p-4">Defender al INE es defender a México </h4>
+            </div>
+            <div class="card-body pt-4 pb-5 border-radius-round">
+              <img class="w-100  border-radius-round" src="https://letraslibres.com/wp-content/uploads/2022/11/jaina-pereyra-marcha-ine.jpg" alt="">
+                <p class="mt-3">
+                  Esta reforma significa un peligro para México y nuestra democracia, pues implica un atentado contra la autonomía del INE...                </p>
+                <a href="https://comentariodeldia.com/2022/11/11/defender-al-ine-es-defender-a-mexico/" class="btn btn-lg btn-light me-3 mb-3">Leer más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-4 pricing">
+          <div class="card mb-4 bg-light border-0 border-radius-round">
+            <div class="card-header border-0 border-radius-round2 bg-orange text-white">
+              <h4 class="my-0 font-weight-normal p-4">¿Quiénes cuidan de las que nos cuidan? </h4>
+            </div>
+            <div class="card-body pt-4 pb-5 border-radius-round">
+                <img class="w-100  border-radius-round" src="https://www.eluniversal.com.mx/resizer/HKVPwh_io4m9Sqmi3HdYASTJpKg=/1100x666/cloudfront-us-east-1.images.arcpublishing.com/eluniversal/H7JNPUBRJ5HZHGG33AOQIQFKVQ.jpg" alt="">
+
+                <p class="mt-3">
+                  No podemos hablar de defender una agenda feminista, sin no estamos hablando de la necesidad urgente de implementar un Sistema Nacional de Cuidados...
+                </p>
+                <a href="https://comentariodeldia.com/2023/07/05/quienes-cuidan-de-las-que-nos-cuidan/ " class="btn btn-lg btn-light me-3 mb-3">Leer más</a>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="prensa">
+    <div class="container mt-5 p-lg-5 p-md-5 p-sm-2 bg-white border-radius-round text-dark text-center">
+      <br class="d-block d-lg-none">
+  
+      <h2 class="mt-0 mb-3">Prensa</h2>
+      <p class="lead mb-5"></p>
+  
+      
+        
+      <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-12 mb-4 pricing">
+          <div class="card mb-4 bg-light border-0 border-radius-round">
+            <div class="card-header border-0 border-radius-round2 bg-orange text-white">
+              <h4 class="my-0 font-weight-normal p-4">Señala Fer Robles que urge trabajar por la desigualdad en CDMX</h4>
+            </div>
+            <div class="card-body pt-4 pb-5 border-radius-round">
+                <img class="w-100 border-radius-round" src="https://cdn2.excelsior.com.mx/830x623/filters:format(webp):quality(75)/media/pictures/2024/01/24/3065538.jpg" alt="">
+                <p class="mt-3">
+                  Leslie Fernanda Robles, precandidata a diputada por el Distrito XIII en la CDMX por Movimiento Ciudadano, señaló que le preocupa la desigualdad de género y falta de oportunidades...
+                </p>
+                <a href="https://www.excelsior.com.mx/comunidad/senala-fer-robles-que-urge-trabajar-por-la-desigualdad-en-cdmx/1631975" class="btn btn-lg btn-light me-3 mb-3">Leer más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-4 pricing">
+          <div class="card mb-4 bg-light border-0 border-radius-round">
+            <div class="card-header border-0 border-radius-round2 bg-orange text-white">
+              <h4 class="my-0 font-weight-normal p-4">
+                Encabeza Fer Robles protesta tras descubrimiento de restos humanos en obras de cablebus
+              </h4>
+            </div>
+            <div class="card-body pt-4 pb-5 border-radius-round">
+                <img class="w-100 border-radius-round" src="https://diariobasta.com/wp-content/uploads/2024/02/99973e2d-00a2-4935-9e92-167321699ec6.jpeg" alt="">
+                <p class="mt-3">
+                  La emecista Fernanda Robles encabezó las protestas ante trabajadores que realizan las obras de la Línea 7 del Cablebús, en la Alcaldía Miguel Hidalgo...
+                </p>
+                <a href="https://diariobasta.com/2024/01/28/encabeza-fer-robles-protesta-tras-descubrimiento-de-restos-humanos-en-obras-de-cablebus/" class="btn btn-lg btn-light me-3 mb-3">Leer más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-4 pricing">
+          <div class="card mb-4 bg-light border-0 border-radius-round">
+            <div class="card-header border-0 border-radius-round2 bg-orange text-white">
+              <h4 class="my-0 font-weight-normal p-4">Fer Robles, la nueva cara de MC para el congreso de la CDMX</h4>
+            </div>
+            <div class="card-body pt-4 pb-5 border-radius-round">
+                <img class="w-100 border-radius-round" src="https://mexico.quadratin.com.mx/www/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-25-at-13.41.50-1160x700.jpeg" alt="">
+                <p class="mt-3">
+                  Tengo un fuerte y honesto compromiso con la igualdad y la justicia social, me preocupa la desigualdad de género y la falta de oportunidades Sí, porque no decirlo, abrazo la convicción de que debemos construir un país donde todos tengamos un piso parejo...
+                </p>
+                <a href="https://mexico.quadratin.com.mx/fer-robles-la-nueva-cara-de-mc-para-el-congreso-de-la-cdmx/" class="btn btn-lg btn-light me-3 mb-3">Leer más</a>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      </div>
+      
+    </div>
+  </section>
+  
+
+
+  <section id="redes">
+    <div class="container mt-5 p-lg-5 p-md-5 p-sm-2 bg-white border-radius-round text-dark text-center">
+      <br class="d-block d-lg-none">
+  
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-12 mb-5">
+          <a href="https://www.instagram.com/ferroblesmx" style="color:#ef7732;">
+            <svg xmlns="http://www.w3.org/2000/svg "width="64" height="64" fill="currentColor" class="bi bi-instagram mb-4" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+            </svg>
+          </a>
+          
+          <h4 class="mb-3 mt-1">INSTAGRAM</h4>
+          <p style="font-size: large;">@FerRoblesMX</p>
+        </div>
+  
+        <div class="col-lg-4 col-md-12 mb-5">
+          <a href="https://www.facebook.com/profile.php?id=100066414469226&mibextid=9R9pXO" style="color:#ef7732;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-facebook mb-4" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+            </svg>
+          </a>
+          <h4 class="mb-3  mt-1">FACEBOOK</h4>
+          <p style="font-size: large;">Fernanda Robles</p>
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-5">
+          <a href="https://twitter.com/FerRoblesMX" style="color:#ef7732;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-twitter-x mb-4" viewBox="0 0 16 16">
+              <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+            </svg> 
+          </a>
+                   
+          <h4 class="mb-3  mt-1">Twitter / X</h4>
+          <p style="font-size: large;">@FerRoblesMX</p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+
+
+</main>
+
+<footer class="footer mt-auto py-3 bg-white">
+  <div class="container d-flex flex-column flex-sm-row justify-content-center align-items-center">
+    <p class="lead text-muted text-center mb-2 mb-sm-0 me-sm-5">© FERNANDA ROBLES 2024</p>
+    <!--
+      <a class="lead text-muted text-center mb-2 mb-sm-0 me-sm-5" target="_blank" href="https://goji.mx/privacy">Política de privacidad</a>
+      <a class="lead text-muted text-center mb-2 mb-sm-0 me-sm-5" target="_blank" href="https://goji.mx/terms">Términos y condiciones</a>
+  
+    -->
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    </body>
+</html>
